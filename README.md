@@ -18,11 +18,22 @@ Abstract: Regardless of the success of convolutional neural networks (CNNs) in m
 
 ## Model Zoo
 
+Install it by:
+```bash
+pip install robustvsnormalzoo
+```
+and then obtain pretrained models as simple as:
+```python
+import robustvsnormalzoo
+
+model = robustvsnormalzoo.load_model(<DATSET>, <PAPER>, <ROBUSTNESS_FLAG>)
+```
+
 
 ## Citation
 
 Would you like to reference our evaluation? \
-Then consider citing our [paper]():
+Then consider citing our paper:
 
 
 ```bibtex
