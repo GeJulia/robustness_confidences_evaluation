@@ -16,7 +16,7 @@ Then consider citing our [paper]():
 @inproceedings{grabinski2022robust,
   title     = {Robust Models are less Over-Confident},
   author    = {Grabinski, Julia and Gavrikov, Paul and Keuper, Janis and Keuper, Margret},
-  booktitle = {Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  booktitle = {Thirty-sixth Conference on Neural Information Processing Systems Main Track},
   year      = {2022},
   url       = {}
 }
