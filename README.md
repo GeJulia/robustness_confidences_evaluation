@@ -26,9 +26,84 @@ and then obtain pretrained models as simple as:
 ```python
 import robustvsnormalzoo
 
-model = robustvsnormalzoo.load_model(<DATSET>, <PAPER>, <ROBUSTNESS_FLAG>)
+model = robustvsnormalzoo.load_model(dataset, paper_id, robust)
 ```
+Set `robust=True` to download the robust checkpoint, and `False` for the normal one.
 
+Supported combinations:
+|dataset |paper_id                            |
+|--------|------------------------------------|
+|cifar10 |Andriushchenko2020Understanding     |
+|cifar10 |Carmon2019Unlabeled                 |
+|cifar10 |Sehwag2020Hydra                     |
+|cifar10 |Wang2020Improving                   |
+|cifar10 |Hendrycks2019Using                  |
+|cifar10 |Rice2020Overfitting                 |
+|cifar10 |Zhang2019Theoretically              |
+|cifar10 |Engstrom2019Robustness              |
+|cifar10 |Chen2020Adversarial                 |
+|cifar10 |Huang2020Self                       |
+|cifar10 |Pang2020Boosting                    |
+|cifar10 |Wong2020Fast                        |
+|cifar10 |Ding2020MMA                         |
+|cifar10 |Zhang2019You                        |
+|cifar10 |Zhang2020Attacks                    |
+|cifar10 |Wu2020Adversarial_extra             |
+|cifar10 |Wu2020Adversarial                   |
+|cifar10 |Gowal2020Uncovering_70_16           |
+|cifar10 |Gowal2020Uncovering_70_16_extra     |
+|cifar10 |Gowal2020Uncovering_34_20           |
+|cifar10 |Gowal2020Uncovering_28_10_extra     |
+|cifar10 |Sehwag2021Proxy                     |
+|cifar10 |Sehwag2021Proxy_R18                 |
+|cifar10 |Sitawarin2020Improving              |
+|cifar10 |Chen2020Efficient                   |
+|cifar10 |Cui2020Learnable_34_20              |
+|cifar10 |Cui2020Learnable_34_10              |
+|cifar10 |Zhang2020Geometry                   |
+|cifar10 |Rebuffi2021Fixing_28_10_cutmix_ddpm |
+|cifar10 |Rebuffi2021Fixing_106_16_cutmix_ddpm|
+|cifar10 |Rebuffi2021Fixing_70_16_cutmix_ddpm |
+|cifar10 |Rebuffi2021Fixing_70_16_cutmix_extra|
+|cifar10 |Sridhar2021Robust                   |
+|cifar10 |Sridhar2021Robust_34_15             |
+|cifar10 |Rebuffi2021Fixing_R18_ddpm          |
+|cifar10 |Rade2021Helper_R18_extra            |
+|cifar10 |Rade2021Helper_R18_ddpm             |
+|cifar10 |Rade2021Helper_extra                |
+|cifar10 |Rade2021Helper_ddpm                 |
+|cifar10 |Huang2021Exploring                  |
+|cifar10 |Huang2021Exploring_ema              |
+|cifar10 |Addepalli2021Towards_RN18           |
+|cifar10 |Addepalli2021Towards_WRN34          |
+|cifar10 |Gowal2021Improving_70_16_ddpm_100m  |
+|cifar10 |Dai2021Parameterizing               |
+|cifar10 |Gowal2021Improving_28_10_ddpm_100m  |
+|cifar10 |Gowal2021Improving_R18_ddpm_100m    |
+|cifar10 |Chen2021LTD_WRN34_10                |
+|cifar10 |Chen2021LTD_WRN34_20                |
+|cifar100|Gowal2020Uncovering                 |
+|cifar100|Gowal2020Uncovering_extra           |
+|cifar100|Cui2020Learnable_34_20_LBGAT6       |
+|cifar100|Cui2020Learnable_34_10_LBGAT0       |
+|cifar100|Cui2020Learnable_34_10_LBGAT6       |
+|cifar100|Chen2020Efficient                   |
+|cifar100|Wu2020Adversarial                   |
+|cifar100|Sitawarin2020Improving              |
+|cifar100|Hendrycks2019Using                  |
+|cifar100|Rice2020Overfitting                 |
+|cifar100|Rebuffi2021Fixing_70_16_cutmix_ddpm |
+|cifar100|Rebuffi2021Fixing_28_10_cutmix_ddpm |
+|cifar100|Rebuffi2021Fixing_R18_ddpm          |
+|cifar100|Rade2021Helper_R18_ddpm             |
+|cifar100|Addepalli2021Towards_PARN18         |
+|cifar100|Addepalli2021Towards_WRN34          |
+|cifar100|Chen2021LTD_WRN34_10                |
+|imagenet|Wong2020Fast                        |
+|imagenet|Engstrom2019Robustness              |
+|imagenet|Salman2020Do_R50                    |
+|imagenet|Salman2020Do_R18                    |
+|imagenet|Salman2020Do_50_2                   |
 
 ## Citation
 
