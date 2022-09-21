@@ -8,7 +8,7 @@ Our model zoo can be found [here](https://zenodo.org/record/7097538#.Yyn4rtfngQI
 
 ## Citation
 
-Would you like to reference the **`FLC Pooling`**? \
+Would you like to reference our evaluation? \
 Then consider citing our [paper]():
 
 
