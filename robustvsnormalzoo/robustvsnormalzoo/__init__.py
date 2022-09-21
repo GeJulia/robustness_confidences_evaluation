@@ -9,6 +9,7 @@ from tqdm import tqdm
 import requests
 import tarfile
 import torch
+import sys
 
 
 MAPPING_CSV = "model_mappings.csv"
@@ -28,7 +29,7 @@ def _download_checkpoint(dataset: str, model_id: str):
     # create folder if not exists
     local_path = os.path.join(CHECKPOINT_PATH, dataset, "Linf")
     os.makedirs(local_path, exist_ok=True)
-    
+
     #download file
     cloud_path = CLOUD_PATH.replace("%DATASET%", dataset).replace("%PAPERID%", model_id)
     temp_file = os.path.join(local_path, f".{model_id}.temp.tar")
@@ -73,8 +74,12 @@ def load_model(dataset: str, paper_id: str, robust: bool):
             matches = list(glob(os.path.join(ckpt_path, "version_0/checkpoints/*.ckpt")))
             if len(matches) == 0:
                 _download_checkpoint(dataset, mapped_id)
-            
+
+            utils_path = os.path.split(os.path.realpath(__file__))[0]
+            sys.path.append(utils_path) # this is an ultra hacky way to load ptl checkpoints
             state = torch.load(matches[0], map_location="cpu")
+            sys.path.remove(utils_path)
+
             model.load_state_dict({k.replace("model.", "") : v for k, v in state["state_dict"].items()})
 
     return model
@@ -84,5 +89,5 @@ def download_all_checkpoints():
     df_mapping = pd.read_csv(MAPPING_CSV, index_col=0)
     for dataset in ["cifar10", "cifar100", "imagenet"]:
         for paper_id in df_mapping[df_mapping.Dataset == dataset].Robust.values:
-            del load_model(dataset, paper_id, robust=True)
-            del load_model(dataset, paper_id, robust=False)
+            load_model(dataset, paper_id, robust=True)
+            load_model(dataset, paper_id, robust=False)
