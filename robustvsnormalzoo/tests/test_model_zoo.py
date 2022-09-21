@@ -1,4 +1,5 @@
 import robustvsnormalzoo
+import robustvsnormalzoo.utils as utils
 
 
 def test_own_models():
@@ -12,7 +13,7 @@ def test_rb_models():
 
 
 def test_timm_models():
-    model = robustvsnormalzoo.load_model("imagenet", "resnet50", False)
+    model = robustvsnormalzoo.load_model("imagenet", "Salman2020Do_R18", False)
     assert model is not None
 
 
