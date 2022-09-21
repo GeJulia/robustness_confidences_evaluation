@@ -17,7 +17,6 @@ Abstract: Regardless of the success of convolutional neural networks (CNNs) in m
 
 
 ## Model Zoo
-Our model zoo can be found [here](https://zenodo.org/record/7097538#.Yyn4rtfngQI)
 
 
 ## Citation
@@ -40,4 +39,4 @@ Then consider citing our [paper]():
 
 ### Legal
 This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa]. Please note that [robust](https://github.com/RobustBench/robustbench/blob/master/LICENSE) and [normal imagenet](https://github.com/rwightman/pytorch-image-models#licenses) models are not provided by us are licensed differently. 
