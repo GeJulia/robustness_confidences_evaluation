@@ -85,6 +85,14 @@ def load_model(dataset: str, paper_id: str, robust: bool):
     return model
 
 
+def list_models():
+    df_mapping = pd.read_csv(MAPPING_CSV, index_col=0)
+    models = []
+    for _, row in df_mapping.iterrows():
+        models.append((row.Dataset, row.Robust))
+    return models
+
+
 def download_all_checkpoints():
     df_mapping = pd.read_csv(MAPPING_CSV, index_col=0)
     for dataset in ["cifar10", "cifar100", "imagenet"]:
