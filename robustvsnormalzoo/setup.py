@@ -1,17 +1,16 @@
 import setuptools
 
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+desc ="A PyTorch model zoo consisting of robust (adversarially trained) image classifiers and otherwise equivalent normal models for research purposes."
 
 
 setuptools.setup(
     name="robustvsnormalzoo",
-    version="1.0.0",
+    version="1.0.1",
     author="Paul Gavrikov",
     author_email="paul.gavrikov@hs-offenburg.de",
-    description="A PyTorch model zoo consisting of robust (adversarially trained) image classifiers and otherwise equivalent normal models for research purposes.",
-    long_description=long_description,
+    description=desc,
+    long_description=desc,
     long_description_content_type="text/markdown",
     url="https://github.com/GeJulia/robust_confidences_evaluation",
     packages=setuptools.find_packages(),
