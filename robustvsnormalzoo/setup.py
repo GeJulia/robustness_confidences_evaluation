@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="robustvsnormalzoo",
-    version="1.0.0",
+    version="1.0.1",
     author="Paul Gavrikov",
     author_email="paul.gavrikov@hs-offenburg.de",
     description="A PyTorch model zoo consisting of robust (adversarially trained) image classifiers and otherwise equivalent normal models for research purposes.",
