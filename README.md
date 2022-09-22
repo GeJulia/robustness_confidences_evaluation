@@ -4,7 +4,8 @@ Julia Grabinski, Paul Gavrikov, Janis Keuper, Margret Keuper
 
 Presented at: Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS)
 
-[Paper]() | [ArXiv]() | [HQ Poster]() | [Talk]()
+<!-- [Paper]() | [ArXiv]() | [HQ Poster]() | [Talk]() -->
+*Links coming soon.*
 
 
 Abstract: *We empirically show that adversarially robust models are less over-confident then their non-robust counterparts.
@@ -30,7 +31,12 @@ model = robustvsnormalzoo.load_model(dataset, paper_id, robust)
 ```
 Set `robust=True` to download the robust checkpoint, and `False` for the normal one.
 
-Supported combinations:
+Supported combinations can be queried by:
+
+```python
+robustvsnormalzoo.list_models()
+```
+
 |dataset |paper_id                            |
 |--------|------------------------------------|
 |cifar10 |Andriushchenko2020Understanding     |
