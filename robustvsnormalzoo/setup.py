@@ -21,7 +21,6 @@ setuptools.setup(
     install_requires=[
         "torch",
         "pandas",
-        "robustbench @ git+https://github.com/RobustBench/robustbench.git@5e3b8bd56a9b6ee52554a63e8a9ea255289a8a12",
         "geotorch==0.3.0",
         "torchdiffeq==0.2.3",
         "timm==0.5.4",
