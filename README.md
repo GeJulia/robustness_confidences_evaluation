@@ -1,5 +1,6 @@
 # Robust Models are less Over-Confident
 Julia Grabinski, Paul Gavrikov, Janis Keuper, Margret Keuper
+
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 Presented at: Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS)
@@ -131,4 +132,4 @@ Then consider citing our paper:
 
 ### Legal
 This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa]. Please note that [robust](https://github.com/RobustBench/robustbench/blob/master/LICENSE) and [normal imagenet](https://github.com/rwightman/pytorch-image-models#licenses) models are not provided by us are licensed differently. 
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa]. Please note that [robust](https://github.com/RobustBench/robustbench/blob/master/LICENSE) and [normal imagenet](https://github.com/rwightman/pytorch-image-models#licenses) models are not provided by us and are licensed differently. 
