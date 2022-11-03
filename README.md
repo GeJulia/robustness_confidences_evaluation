@@ -119,14 +119,14 @@ Then consider citing our paper:
 
 
 ```bibtex
-@inproceedings{grabinski2022robust,
-  title     = {Robust Models are less Over-Confident},
-  author    = {Grabinski, Julia and Gavrikov, Paul and Keuper, Janis and Keuper, Margret},
-  booktitle = {Advances in Neural Information Processing Systems},
-  publisher = {Curran Associates, Inc.},
-  year      = {2022},
-  volume    = {35},
-  url       = {}
+@inproceedings{
+  grabinski2022robust,
+  title={Robust Models are less Over-Confident},
+  author={Julia Grabinski and Paul Gavrikov and Janis Keuper and Margret Keuper},
+  booktitle={Advances in Neural Information Processing Systems},
+  editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+  year={2022},
+  url={https://openreview.net/forum?id=5K3uopkizS}
 }
 ```
 
