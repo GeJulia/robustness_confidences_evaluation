@@ -19,9 +19,11 @@ Abstract: Regardless of the success of convolutional neural networks (CNNs) in m
 
 
 ## Model Zoo
+[![Latest Version](https://img.shields.io/pypi/v/robustvsnormalzoo.svg)](https://pypi.python.org/pypi/robustvsnormalzoo)
 
 Install it by:
 ```bash
+pip install git+https://github.com/RobustBench/robustbench.git@v1.0
 pip install robustvsnormalzoo
 ```
 and then obtain pretrained models as simple as:
