@@ -12,7 +12,7 @@ import torch
 import sys
 
 
-MAPPING_CSV = "model_mappings.csv"
+MAPPING_CSV = os.path.join(os.path.split(os.path.abspath(__file__))[0], "model_mappings.csv")
 CHECKPOINT_PATH = "./models_normal"
 CLOUD_PATH = "https://zenodo.org/record/7097538/files/%DATASET%_normal_robustbench_%PAPERID%.tar"
 
