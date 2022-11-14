@@ -39,6 +39,7 @@ Supported combinations can be queried by:
 ```python
 robustvsnormalzoo.list_models()
 ```
+<details>
 
 |dataset |paper_id                            |
 |--------|------------------------------------|
@@ -113,6 +114,8 @@ robustvsnormalzoo.list_models()
 |imagenet|Salman2020Do_R50                    |
 |imagenet|Salman2020Do_R18                    |
 |imagenet|Salman2020Do_50_2                   |
+
+</details>
 
 ## Citation
 
