@@ -5,8 +5,7 @@ Julia Grabinski, Paul Gavrikov, Janis Keuper, Margret Keuper
 
 Presented at: Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS)
 
-<!-- [Paper]() | [ArXiv]() | [HQ Poster]() | [Talk]() -->
-*Links coming soon.*
+ [Paper](https://openreview.net/pdf?id=5K3uopkizS) <!-- | [ArXiv]() | [HQ Poster]() | [Talk]() -->
 
 
 Abstract: *We empirically show that adversarially robust models are less over-confident then their non-robust counterparts.
