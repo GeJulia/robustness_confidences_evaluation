@@ -74,6 +74,7 @@ def load_model(dataset: str, paper_id: str, robust: bool):
             matches = list(glob(os.path.join(ckpt_path, "version_0/checkpoints/*.ckpt")))
             if len(matches) == 0:
                 _download_checkpoint(dataset, mapped_id)
+                matches = list(glob(os.path.join(ckpt_path, "version_0/checkpoints/*.ckpt")))
 
             utils_path = os.path.split(os.path.realpath(__file__))[0]
             sys.path.append(utils_path) # this is an ultra hacky way to load ptl checkpoints
