@@ -6,7 +6,7 @@ desc ="A PyTorch model zoo consisting of robust (adversarially trained) image cl
 
 setuptools.setup(
     name="robustvsnormalzoo",
-    version="1.0.3",
+    version="1.0.4",
     author="Paul Gavrikov",
     author_email="paul.gavrikov@hs-offenburg.de",
     description=desc,

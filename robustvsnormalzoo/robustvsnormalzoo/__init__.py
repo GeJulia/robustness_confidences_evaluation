@@ -17,12 +17,22 @@ CHECKPOINT_PATH = "./models_normal"
 CLOUD_PATH = "https://zenodo.org/record/7097538/files/%DATASET%_normal_robustbench_%PAPERID%.tar"
 
 
-def _download_file(url, path):
-    response = requests.get(url)
+def _download_file(url, path, chunk_size=1024):
+    
+    response = requests.get(url, stream=True)
+    total_size = int(response.headers.get("content-length", 0))  # Get total file size in bytes
 
-    with open(path, "wb") as handle:
-        for data in tqdm(response.iter_content(), desc=f"Downloading {url}", unit="B", unit_scale=True):
-            handle.write(data)
+    with open(path, "wb") as file, tqdm(
+        desc=path,
+        total=total_size,
+        unit="B",
+        unit_scale=True,
+        unit_divisor=chunk_size,
+    ) as bar:
+        for chunk in response.iter_content(chunk_size=chunk_size):
+            if chunk:  # Filter out keep-alive chunks
+                file.write(chunk)
+                bar.update(len(chunk))
 
 
 def _download_checkpoint(dataset: str, model_id: str):
@@ -78,7 +88,7 @@ def load_model(dataset: str, paper_id: str, robust: bool):
 
             utils_path = os.path.split(os.path.realpath(__file__))[0]
             sys.path.append(utils_path) # this is an ultra hacky way to load ptl checkpoints
-            state = torch.load(matches[0], map_location="cpu")
+            state = torch.load(matches[0], map_location="cpu", weights_only=False)
             sys.path.remove(utils_path)
 
             model.load_state_dict({k.replace("model.", "") : v for k, v in state["state_dict"].items()})
